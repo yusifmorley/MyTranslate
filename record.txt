@@ -1,0 +1,1 @@
+query :询问transferable :可转让的 currently :现在deserialization :反序列化deserialization :反序列化

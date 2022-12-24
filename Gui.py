@@ -12,6 +12,10 @@ def querys(ask):
     return text.translatedText
 
 
+def writerecord(str):
+    with open("record.txt","a") as fs:
+        fs.write(str)
+
 class MyTranslate(QWidget):
 
     def __init__(self):
@@ -31,10 +35,13 @@ class MyTranslate(QWidget):
         self.show()
 
     def change_deal(self):
-        if self.windowState()!=QtCore.Qt.WindowActive:
+        if self.windowState() != QtCore.Qt.WindowActive:
             self.setWindowState(QtCore.Qt.WindowActive)  # 活动窗口
         data = self.clipboard.mimeData()
-        self.lbl.setText(querys(data.text()))
+        str0=data.text()
+        str1=querys(str0)
+        self.lbl.setText(str1)
+        writerecord(str0+" :"+str1)
 
 
 if __name__ == '__main__':
