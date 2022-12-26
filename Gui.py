@@ -13,8 +13,9 @@ def querys(ask):
 
 
 def writerecord(str):
-    with open("record.txt","a") as fs:
-        fs.write(str)
+    with open("record.txt", "a") as fs:
+        fs.write(str + "\n")
+
 
 class MyTranslate(QWidget):
 
@@ -38,10 +39,10 @@ class MyTranslate(QWidget):
         if self.windowState() != QtCore.Qt.WindowActive:
             self.setWindowState(QtCore.Qt.WindowActive)  # 活动窗口
         data = self.clipboard.mimeData()
-        str0=data.text()
-        str1=querys(str0)
+        str0 = data.text()
+        str1 = querys(str0)
         self.lbl.setText(str1)
-        writerecord(str0+" :"+str1)
+        writerecord(str0 + " -" + str1)
 
 
 if __name__ == '__main__':

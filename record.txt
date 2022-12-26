@@ -1,1 +1,7 @@
-clip :夹子
+undertook :承担
+bilingual :双语
+recruited :招募
+dyslexia :阅读障碍
+ slide  :滑动
+Peach. :桃。
+#DBE1F1 :#DBE1F1
